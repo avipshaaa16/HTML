@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <table border="3"      bgcolor="yellow">
+            <tr>
+                <th bgcolor="blue" border="10">Film</th>
+                    <th>Actor</th>
+                    <th>Actress</th>
+                </tr>
+                <tr>
+                    <td>Jab we Met</td>
+                    <td>Shahid Kapoor</td>
+                    <td>Kareena Kapoor</td>
+                </tr>
+                <tr>
+                    <td>Yeh Jawani Hai Diwani</td>
+                    <td>Ranbir Kapoor</td>
+                    <td>Deepika Padukone</td>
+                </tr>
+                <tr>
+                    <td>Ajab prem ki gajab kahani</td>
+                    <td>Ranbir Kapoor</td>
+                    <td>Katrina Kaif</td>
+                </tr>
+            </table>
+        </body>
+        </html>
+
+                
+
