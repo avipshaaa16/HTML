@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: black;
+        color: white    ;
+        padding: 10px   ;
+     }
+     h1 {
+        color: aqua   ;
+     }
+     li::before {
+        content:"🚀";
+        }
+        p::first-letter{
+            font-size: 50px;
+            color: aquamarine;
+        }
+        p:not(:first-of-type) {
+    text-decoration : underline ;
+     text-decoration-color:white ;
+        }
+        li:nth-child(3){
+            background-color: rgb(94, 92, 92);
+        }
+        a::after{
+            content:"🚀";
+        }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Space Explorer's Club</h1>
+        <ul>
+            <li>Moon Mission</li>
+            <li>Mars Rovers</li>
+            <li>International Space Station</li>
+            <li>Telescope and Stars</li>
+            <li>Black holes mysteries</li>
+        </ul>
+        <p>Space Exploration</p>
+        <p>From the Moon</p>
+        <a href="">Join</a>
+        <a href="">Let us</a>
+        <a href="">Gallery</a>
+    </div>
+
+</body>
+
+</html>
