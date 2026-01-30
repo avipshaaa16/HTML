@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of variables</title>
+</head>
+
+<body>
+    <h1>Scope of variables</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <button onclick="myfunction()">Click me!!!!!</button>
+    <script>
+        var a = 8;
+
+        function myfunction() {
+            var b = 5;
+            document.getElementById("demo").innerHTML = "The multiplication of" + a + "*" + b + "=" + a * b;
+        }
+
+    </script>
+</body>
+
+</html>
