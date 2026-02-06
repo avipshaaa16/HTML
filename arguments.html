@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object Arguments</title>
+</head>
+
+<body>
+    <center>
+        <h1>Javascript objects arguments</h1>
+        <p>Find the largest number with the helpof argument object</p>
+        <p id="demo"></p>
+        <script>
+            function findmax() {
+                var a;
+                var max = 0;
+                for (i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max) { max = arguments[i]; }
+                }
+                return max;
+            }
+            document.getElementById("demo").innerHTML = findmax(4, 5, 6);
+
+        </script>
+    </center>
+</body>
+
+</html>
