@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+
+<body onload="myfunction()">
+    <h1>Conditionals in Javascript</h1>
+
+    <p id="Result"></p>
+    <p id="Greet"></p>
+    <script>
+        function myfunction() {
+            var greeting;
+            var hour = new Date().getHours();
+            var minute = new Date().getMinutes();
+            var sec = new Date().getSeconds();
+            if (hour < 11) {
+                greeting = "Good Morninggg";
+            }
+            else if (hour < 20) {
+                greeting = "Good Dayyy";
+            }
+            else {
+                greetings = "Good Eveninggg";
+            }
+            document.getElementById("Result").innerHTML = "Current hour is" + hour + "  :" + minute + "  :" + sec;
+            document.getElementById("Greet").innerHTML = greeting;
+
+
+        }
+        setInterval(myfunction, 1000)
+
+    </script>
+</body>
+
+</html>
