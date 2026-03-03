@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method in JS</title>
+</head>
+
+<body>
+    <h1>Static Method in JS</h1>
+    <p> It is created with "static" keyword , and you can only call the method on the class itself</p>
+    <p id="hello"></p>
+    <p id="hi"></p>
+    <p id="welcome"></p>
+    <script>
+        class student {
+            constructor(name) {
+                this.studentname = name;
+            }
+            static hello() {
+                return "Hello";
+            }
+            static hi(x) {
+                return "Hi" + x.studentname;
+            }
+            welcome() {
+                return "Welcome" + this.studentname;
+            }
+        }
+        myname = new student("Aarohan")
+        //Call 'hello()' on the class Student and NOT on the 'myname' object because 'hello()' is a static method it cannot access object
+        document.getElementById("hello").innerHTML = student.hello();
+        //Call 'hi()' on the class Student and NOT on the 'myname' object because 'hi()' is a static method it cannot access object
+        document.getElementById("hi").innerHTML = student.hi(myname);
+        //Call 'welcome()' 
+        document.getElementById("welcome").innerHTML = myname.welcome();
+
+    </script>
+</body>
+
+</html>
