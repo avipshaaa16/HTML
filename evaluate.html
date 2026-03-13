@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate Variables</title>
+</head>
+
+<body>
+    <h1>Evaluate variables using "eval" function</h1>
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">-</button>
+    <p id="result"></p>
+    <script>
+   var number1 = parseInt(prompt("enter your first number"));
+    var number2 = parseInt(prompt("enter your second number"));
+    function add() {
+        var result = eval("number1+number2");
+        document.getElementById("result").innerHTML = result;
+    }
+    function subtract() {
+        var result = eval("number1-number2");
+        document.getElementById("result").innerHTML = result;
+    }
+    </script>
+</body>
+
+</html>

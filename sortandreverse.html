@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort and Reverse</title>
+</head>
+<body>
+    <h1>Sort and Reverse</h1>
+    <button onclick="ascending()">Ascending</button>
+    <button id="descending">Descending</button>
+    <p id="result"></p>
+    <script>
+       var array1= [40 , 100 , 1 ,50 , 19];
+       document.getElementById("result").innerHTML= array1
+       function ascending(){
+        array1.sort(function(a,b){
+            return a-b;
+        })
+        document.getElementById("result").innerHTML= array1;
+       }
+       document.getElementById("descending").addEventListener("click",()=>
+    {
+        array1.sort(function(a,b){
+            return b-a;
+        })
+        document.getElementById("result").innerHTML= array1;
+    })
+    </script>
+</body>
+</html>

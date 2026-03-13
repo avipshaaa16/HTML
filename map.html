@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Array</title>
+</head>
+
+<body>
+    <h1>Map and Array</h1>
+    <p id="result"></p>
+    <script>
+        var array = [12, 24, 16, 19];
+        function multiply(num){
+            return num*10 ;
+        }
+        var newarray = array.map(multiply);
+        document.getElementById("result").innerHTML= newarray;
+
+    </script>
+</body>
+
+</html>
