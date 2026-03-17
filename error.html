@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling</title>
+</head>
+
+<body>
+    <h2>Error handling in JS(promise)</h2>
+    <p id="result"></p>
+    <script>
+        // function addalert(name){
+        //     alert("function is created.")
+        // }
+        try {
+            addalert("Welcome");
+        }
+        catch (err) {
+            document.getElementById("result").innerHTML = err.message;
+        }
+    </script>
+</body>
+
+</html>
