@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in js</title>
+</head>
+
+<body>
+    <h1>Promises in JS</h1>
+    <p id="result"></p>
+    <script>
+        function display(result) {
+            document.getElementById("result").innerHTML = result;
+        }
+        function add(a, b) {
+            var sum = a + b;
+            display(sum);
+        }
+        let mypromise = new Promise((resolve, reject) => {
+            let x = 10;
+            if (x == 0) {
+                resolve("success");
+            } else {
+                reject("failed");
+            }
+        })
+        mypromise.then(
+            function (value) {
+                add(12, 90);
+            },
+            function (error) {
+                add(error);
+            }
+        )
+    </script>
+</body>
+
+</html>
