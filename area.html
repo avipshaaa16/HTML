@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculation using JS</title>
+</head>
+
+<body>
+    <h1>Area Calculation using JS</h1>
+    <p id="result"></p>
+    <p id="demo"></p>
+    <script>
+        var choice = prompt("1.Area of rectangle\n 2.Area of square ");
+        if (choice == "1") {
+            var l = prompt("Enter the length");
+            var b = prompt("Enter the breadth");
+            var result = Number(l) * Number(b);
+            document.write("The value of l is" + l + "the value of b is" + b);
+            document.getElementById("result").innerHTML = "The area of a rectangle is" + result;
+
+        } else if (choice == "2") {
+            var s = prompt("Enter the side");
+            var result = Number(s) * Number(s);
+            document.getElementById("result").innerHTML = "The area of square is" + result;
+        } else {
+            document.getElementById("result").innerHTML = "invalid choice";
+        }
+    </script>
+</body>
+
+</html>
