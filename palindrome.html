@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome in JS</title>
+</head>
+
+<body>
+    <h2>Palindrome in JS</h2>
+    <script>
+        function myfunction(a) {
+            var p = a.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+               document.write("<div>" + p + "is a palindrome</div>");
+            var reverse_p = p.split("").reverse().join("");
+            if (p === reverse_p) {
+                document.write("<div>" + a + "is a palindrome</div>");
+            }
+            else {
+                document.write("<div>" + a + "is not a palindrome</div>");
+            }
+        }
+        myfunction("AVIPSHA IS A COOL GUITARIST");
+
+    </script>
+</body>
+
+</html>
