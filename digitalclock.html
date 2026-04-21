@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+
+<body>
+    <div id="result" onload="myfunction()"></div>
+    <script>
+        function myfunction() {
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var seconds = date.getSeconds();
+            var session = "AM";
+            if (hour > 12) {
+                session = "PM";
+                hour = hour - 12;
+            }
+            hour = (hour < 10) ? "0" + hour : hour;
+            minute = (minute < 10) ? "0" + minute : minute;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+            var time = hour + ":" + minute + ":" + seconds + " " + session;
+            document.getElementById("result").innerText = time;
+            setTimeout(myfunction, 1000);
+        }
+        myfunction();
+
+
+    </script>
+</body>
+
+</html>
