@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List in JS</title>
+</head>
+
+<body>
+    <h2>Add your shopping items here</h2>
+    <form id="myForm">
+        <input id="myInput" type="text">
+        <button>Add</button>
+    </form>
+    <h3>Shopping list</h3>
+    <ul id="myItem"></ul>
+    <script>
+        var myForm = document.getElementById("myForm");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+        myForm.addEventListener("submit", function (event) {
+            event.preventDefault()
+            createItem(myInput.value)
+        })
+        var items = `<li>${inputItems}</li>`;
+        myItem.insertAdjacentHTML("beforeend", items)
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+                 <button onclick="deleteElement(this)">X</button></li>`;
+            myItem.insertAdjacentHTML("beforeend", items)
+            myInput.value = ""
+            myInput.focus()
+        }
+        function deleteElement(ElementToDelete) {
+            ElementToDelete.parentElement.remove();
+        }
+
+    </script>
+</body>
+
+</html>
