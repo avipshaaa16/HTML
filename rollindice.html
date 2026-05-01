@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rolling Dice</title>
+
+    <style>
+        body {
+
+            text-align: center;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        #dice {
+
+            font-size: 320px;
+
+        }
+
+        #dice:hover {
+
+            cursor: pointer;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>Click on the dice...</div>
+
+    <!-- FIX: id should be dice (not class), and correct function name -->
+
+    <div id="dice" onclick="stopStart()"></div>
+
+    <script>
+
+        // dice emoji array
+
+        var dices = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+
+        var stopped = true;
+
+        var t;
+
+        var dice;
+
+        // change dice randomly
+
+        function change() {
+
+            var random = Math.floor(Math.random() * 6);
+
+            dice.innerHTML = dices[random];
+
+        }
+
+        // FIX: correct function name (case sensitive)
+
+        function stopStart() {
+
+            if (stopped) {
+
+                stopped = false;
+
+                t = setInterval(change, 100);
+
+            } else {
+
+                clearInterval(t);
+
+                stopped = true;
+
+            }
+
+        }
+
+        // on load
+
+        window.onload = function () {
+
+            dice = document.getElementById("dice");
+
+            stopStart();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
