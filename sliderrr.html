@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+</head>
+<body>
+    <section>
+        <img class="mySlides" src="https://th.bing.com/th/id/R.416dcec811feaa0ccf77b86cbd8f628d?rik=E8xEH5uruijKWg&pid=ImgRaw&r=0" style="height: 500px;">
+        <img class="mySlides" src="https://cdn.mos.cms.futurecdn.net/fthQF7xz7V5coEShUuRUQZ.jpg" style="height: 500px;">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i< x.length; i++){
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x[myIndex-1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+</html>
